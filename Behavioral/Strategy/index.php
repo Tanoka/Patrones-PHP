@@ -1,5 +1,17 @@
 <?php
-
+/**
+* Enables an algorithm's behavior to be selected at runtime.
+* The strategy pattern:
+*    defines a family of algorithms,
+*    encapsulates each algorithm, and
+*    makes the algorithms interchangeable within that family
+*/
+/**
+* En este caso en cada llamada se pasa el objecto con la estrategia a seguir.
+* En index2.php es la propia clase la que decide que algoritmo usar.
+*
+*
+*/
 interface IStrategy
 {
 
