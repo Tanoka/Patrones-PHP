@@ -1,0 +1,38 @@
+Creational (creación)
+------------
+Singleton
+Factory
+Abstract Factory
+--
+Builder
+Protopype
+
+Structural (Estructural)
+-----------
+Adapter
+Decorator
+Façade
+--
+Composite
+Flyweight
+Proexy
+Bridge
+
+
+Behavioral (comportamiento)
+----------
+Observer
+Strategy
+Command
+--
+State
+Template
+Visitor
+Chain of responsability
+Interpreter
+Mediator
+Memento
+
+
+
+
