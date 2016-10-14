@@ -1,9 +1,22 @@
 <?php
+/**
+ * The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
+ *
+ * Composite should be used when clients ignore the difference between compositions of objects and individual objects.
+ *
+ * Structure:
+ * Component. Is the abstraction for all components, including composite ones
+ * Leaf. Represents leaf objects in the composition. Implements all Component methods
+ * Composite. Represents a composite Component (component having children). implements methods to manipulate children.
+ *            implements all Component methods, generally by delegating them to its children
+ */
 
+//Component Interface
 abstract class Graphic{
     abstract public function draw();
 }
 
+//Leaf
 class Triangle extends Graphic{
     private $name = '';
 
@@ -16,6 +29,7 @@ class Triangle extends Graphic{
     }
 }
 
+//Composite
 class Container extends Graphic{
     private $name = '';
     private $container = array();
@@ -26,8 +40,9 @@ class Container extends Graphic{
 
     public function draw(){
         echo 'I\'m a container '.$this->name.'.<br>';
-        foreach($this->container as $graphic)
+        foreach($this->container as $graphic) {
             $graphic->draw();
+        }
     }
 
     public function add(Graphic $graphic){
